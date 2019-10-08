@@ -27,16 +27,21 @@
   <div class="hero-block d-flex align-items-center">
     <div class="hero-block__inner container">
       <div class="row">
-        <div class="col-12 offset-0 col-md-10 offset-md-1 col-xl-6 offset-lg-0">
+        <div class="col-12 offset-0 col-md-10 offset-md-1 col-xl-6 offset-xl-0 hero-block__description">
+          <div class="d-flex justify-content-center align-items-center"><img src="img/svg/np_earth.svg" alt="world-img"><p class="text-center hero-block_color-text">МЕЖДУНАРОДНАЯ ОНЛАЙН-КОНФЕРЕНЦИЯ</p></div>
           <h1 class="hero-block__title text-center"><span>М</span><span>Л</span><span>М</span></h1>
           <h2 class="hero-block__subtitle text-center">На Максимуме</h2>
           <p class="hero-block__text text-center">Международная онлайн конференция о том, как получить максимальную выгоду и максимальный финансовый результат от сотрудничества с МЛМ компанией.</p>
+          <img class="hero-block__bg-img" src="img/png/blot-top-desktop.png" alt="blot">
+          <img class="arrow" src="img/svg/np_arrow_2.svg" alt="arrow">
         </div>
-        <div class="col-12 offset-0 col-xl-5 offset-xl-1">
-            <form id="form" action="https://email.vsevolodtatarinov.ru/add_subscriber.html" accept-charset="utf-8" method="post">
+        <div class="col-12 offset-0 col-md-10 offset-md-1 col-xl-5 offset-xl-1">
+            <form class="invite-form" id="form-1" action="https://email.vsevolodtatarinov.ru/add_subscriber.html" accept-charset="utf-8" method="post">
               <!-- Поле Email (обязательно) -->
-              email: <input type="text" name="email"/><br/>
-              telefon: <input name="custom_telefon" type="text" value="" /><br/>
+              <label for="email">E-MAIL</label>
+              <input type="text" name="email" placeholder="Адрес электронной почты"/><br/>
+              <label for="custom_telefon">ТЕЛЕФОН</label>
+              <input name="custom_telefon" type="text" value="" placeholder="+7" /><br/>
               <!-- Токен списка -->
               <!-- Получить API ID на: https://email.vsevolodtatarinov.ru/campaign_list.html -->
               <input type="hidden" name="campaign_token" value="LZwqa" />
@@ -47,7 +52,7 @@
               <!-- Forward form data to your page (optional) -->
               <input type="hidden" name="forward_data" value="post" />
               <!-- Кнопка подписаться -->
-              <input type="submit" value="Subscribe"/>
+              <input class="become-member-button" type="submit" value="стать участником"/>
               </form>
         </div>
       </div>
@@ -88,7 +93,7 @@
           <img src="img/png/sert.png" alt="sert">
         </div>
         <div class="col-12 offset-0 col-lg-4 offset-lg-4">
-          <a href="#form" class="become-member-button" href="">стать участником</a>
+          <a href="#form-1" class="become-member-button" href="">стать участником</a>
         </div>
       </div>
     </div>
@@ -163,7 +168,7 @@
             <div class="row h-100">
               <div class="col-12 offset-0 col-lg-5 offset-lg-1 d-flex flex-column justify-content-lg-center">
                 <p class="marked-text">Темы ведут самые высокооплачиваемые и эффективные сетевики, которые сами реально преодолели планку в 1 000 000 $.</p>
-                <a href="#form" class="become-member-button" href="">стать участником</a>
+                <a href="#form-1" class="become-member-button" href="">стать участником</a>
               </div>
             </div>
           </div>
@@ -447,7 +452,7 @@
         </div>
 
         <div class="col-12 offset-0 col-lg-4 offset-lg-4">
-          <a href="#form" class="become-member-button">стать участником</a>
+          <a href="#form-2" class="become-member-button">стать участником</a>
         </div>
 
       </div>
@@ -468,6 +473,64 @@
       </div>
     </div>
   </div> 
+
+  <div class="hero-block hero-block_bottom d-flex align-items-center">
+    <div class="hero-block__inner container">
+      <div class="row">
+        <div class="col-12 offset-0 col-md-10 offset-md-1 col-xl-6 offset-xl-0 hero-block__description">
+          <p class="hero-block__text text-center text-xl-left text-white">Регистрируйтесь сейчас, <br> эта конференция именно для Вас!</p>
+          <h1 class="hero-block__title text-center text-xl-left"><span>М</span><span>Л</span><span>М</span></h1>
+          <h2 class="hero-block__subtitle text-center text-xl-left">На Максимуме</h2>
+          <div class="bottom-color-block">
+            <p class="hero-block__text text-center">Воспользуйтесь уникальным шансом:</p>
+            <h3 class="text-center">3 - 14 декабря 15:00 (Мск)</h3>
+          </div>
+          <p class="hero-block__text text-center text-xl-left">Получи максимальную выгоду и максимальный финансовый результат от сотрудничества с МЛМ компанией.</p>
+          <img class="hero-block__bg-img" src="img/png/blot-bottom-desktop.png" alt="blot">
+          <img class="arrow" src="img/svg/np_arrow_2.svg" alt="arrow">
+        </div>
+        <div class="col-12 offset-0 col-md-10 offset-md-1 col-xl-5 offset-xl-1">
+            <form class="invite-form" id="form-2" action="https://email.vsevolodtatarinov.ru/add_subscriber.html" accept-charset="utf-8" method="post">
+              <h2 class="text-center">СТАНЬ УЧАСТНИКОМ ОНЛАЙН-КОНФЕРЕНЦИИ</h2>
+              <!-- Поле Email (обязательно) -->
+              <label for="email">E-MAIL</label>
+              <input type="text" name="email" placeholder="Адрес электронной почты"/><br/>
+              <label for="custom_telefon">ТЕЛЕФОН</label>
+              <input name="custom_telefon" type="text" value="" placeholder="+7" /><br/>
+              <!-- Токен списка -->
+              <!-- Получить API ID на: https://email.vsevolodtatarinov.ru/campaign_list.html -->
+              <input type="hidden" name="campaign_token" value="LZwqa" />
+              <!-- Страница благодарности (по желанию) -->
+              <input type="hidden" name="thankyou_url" value="https://vsevolodtatarinov.com/welcome"/>
+              <!-- Добавить подписчика в цикл на определенный день (по желанию) -->
+              <input type="hidden" name="start_day" value="0" />
+              <!-- Forward form data to your page (optional) -->
+              <input type="hidden" name="forward_data" value="post" />
+              <!-- Кнопка подписаться -->
+              <input class="become-member-button" type="submit" value="стать участником"/>
+              <p class="text-center">Нажимая на кнопку, вы даете согласие на обработку <span class="text-white">персональных данных</span></p>
+              </form>
+        </div>
+      </div>
+    </div>  
+  </div>
+
+  <div class="foooter">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-md-6">
+          <p class="text-center text-md-left">Copyright © 2019.</p>
+          <p class="text-center text-md-left">ИП Татаринов Всеволод Серафимович.</p> 
+          <p class="text-center text-md-left">Если у Вас возникли вопросы - напишите:</p> 
+          <p class="text-center text-md-left red-text">help@vsevolodtatarinov.ru</p>
+        </div>
+        <div class="col-xs-12 col-md-6 mt-4">
+          <p class="text-center text-md-right red-text">Соглашение об обработке персональных данных</p>
+          <p class="text-center text-md-right red-text">Политика конфиденциальности</p>
+        </div>
+      </div>
+    </div>
+  </div>
 
 </body>
 </html>
