@@ -673,13 +673,6 @@ ul li::before {
   transform: rotate(90deg);
 }
 
-.motivation-block-white img.money-img-1 {
-  position: absolute;
-  bottom: -10%;
-  left: 0;
-  width: 10%;
-}
-
 @media (min-width: 375px) {
   .program-block__img {
     height: 680px;
