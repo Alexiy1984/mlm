@@ -283,6 +283,8 @@ ul li::before {
   transition: box-shadow 0.2s, color 0.2s;
   transition: box-shadow 0.2s, color 0.2s, -webkit-box-shadow 0.2s;
   border: none;
+  font-family: "GloberRegular", sans-serif;
+  font-weight: 600;
 }
 
 .become-member-button:hover,
