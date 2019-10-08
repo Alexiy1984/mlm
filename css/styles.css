@@ -936,6 +936,7 @@ ul li::before {
 
   .program-block img {
     margin-bottom: 60px;
+    width: 50%;
   }
   
   .program-block__img {
