@@ -28,8 +28,8 @@
 }
 @font-face {
   font-family: 'BebasNeueRegular';
-  src: url('../fonts/bebas/BebasNeueRegular.eot?#iefix') format('embedded-opentype'), url('../fonts/bebas/BebasNeueRegular.woff') format('woff'), url('../fonts/bebas/BebasNeueRegular.ttf') format('truetype'), url('../fonts/bebas/BebasNeueRegular.svg#BebasNeueRegular') format('svg');
   src: url('../fonts/bebas/BebasNeueRegular.eot');
+  src: url('../fonts/bebas/BebasNeueRegular.eot?#iefix') format('embedded-opentype'), url('../fonts/bebas/BebasNeueRegular.woff') format('woff'), url('../fonts/bebas/BebasNeueRegular.ttf') format('truetype'), url('../fonts/bebas/BebasNeueRegular.svg#BebasNeueRegular') format('svg');
 }
 @font-face {
   font-family: 'BebasNeueBold';
@@ -117,15 +117,18 @@ ul li::before {
   text-align: center;
   margin: 0;
   text-transform: uppercase;
+  font-family: "BebasNeueRegular", sans-serif;
+  letter-spacing: 0.72px;
 }
 
 .hero-block {
-  background-image: url('../img/jpg/Hero-block-img_mobile.jpg');
+  background: url('../img/jpg/Hero-block-img_mobile.jpg'), linear-gradient(to top, #9acbf5 0%, #e2f5fb 20%);
   height: auto;
-  background-size: cover;
+  background-size: contain;
   background-position: center 0;
   overflow: hidden;
-  padding-top: 75%;
+  padding-top: 50%;
+  background-repeat: no-repeat;
 }
 
 .hero-block__description,
@@ -139,11 +142,11 @@ ul li::before {
 }
 
 .hero-block__bg-img {
-  width: 150%;
-  height: 150% !important;
+  width: 200%;
+  height: 200% !important;
   position: absolute;
-  top: -40%;
-  left: -10%;
+  top: -52%;
+  left: -46%;
   z-index: 30;
 }
 
@@ -190,13 +193,14 @@ ul li::before {
   margin-top: 20px;
   margin-bottom: 20px;
   padding: 0 4%;
+  font-family: "GloberSemibold", sans-serif;
 }
 
 .motivation-block-img {
   height: 820px;
   position: relative;
-  background: -webkit-gradient(linear, left bottom, left top, from(#2F344F), to(transparent)), url('../img/jpg/Teamwork.jpg');
-  background: linear-gradient(to top, #2F344F 0%, transparent 100%), url('../img/jpg/Teamwork_mobile.jpg');
+  background: -webkit-gradient(linear, left bottom, left top, from(rgb(47, 52, 79, 0.95)), color-stop(40%, rgb(47, 52, 79, 0.8)), to(transparent)), url('../img/jpg/Teamwork_mobile.jpg');
+  background: linear-gradient(to top, rgb(47, 52, 79, 0.95) 0%, rgb(47, 52, 79, 0.8) 40%, transparent 100%), url('../img/jpg/Teamwork_mobile.jpg');
   background-position: 0 0;
   background-size: cover;
   color: #fff;
@@ -284,14 +288,14 @@ ul li::before {
 .become-member-button:hover,
 .become-member-button:active,
 .become-member-button:visited {
-  color: rgba(255, 255, 255, 0.8);
   text-decoration: none;
+  color: #fff;
   -webkit-box-shadow: 6px 6px 0 0 #7e1816;
           box-shadow: 6px 6px 0 0 #7e1816;
-  -webkit-transition: color 0.2s, -webkit-box-shadow 0.2s;
-  transition: color 0.2s, -webkit-box-shadow 0.2s;
-  transition: box-shadow 0.2s, color 0.2s;
-  transition: box-shadow 0.2s, color 0.2s, -webkit-box-shadow 0.2s;
+  -webkit-transition: -webkit-box-shadow 0.2s;
+  transition: -webkit-box-shadow 0.2s;
+  transition: box-shadow 0.2s;
+  transition: box-shadow 0.2s, -webkit-box-shadow 0.2s;
 }
 
 .why-block {
@@ -529,6 +533,8 @@ ul li::before {
   -webkit-box-shadow: 0px 0px 0px 10px rgba(255,255,255,0.25);
           box-shadow: 0px 0px 0px 10px rgba(255,255,255,0.25);
   margin-bottom: 20px;
+  position: relative;
+  z-index: 40;
 }
 
 .invite-form label {
@@ -596,11 +602,6 @@ ul li::before {
   margin-bottom: 30px;
 }
 
-.hero-block_bottom .hero-block__bg-img {
-  top: -15%;
-  left: -25%;
-}
-
 .hero-block_bottom .hero-block__title {
   margin-left: 0;
 }
@@ -661,7 +662,8 @@ ul li::before {
   position: absolute;
   bottom: -5%;
   right: 80%;
-  transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
 }
 
 .hero-block_bottom img.arrow {
@@ -670,7 +672,8 @@ ul li::before {
   position: absolute;
   bottom: -5%;
   right: 80%;
-  transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
 }
 
 @media (min-width: 375px) {
@@ -745,9 +748,10 @@ ul li::before {
 @media (min-width: 768px) {
   .hero-block {
     background-image: url('../img/jpg/Hero-block-img.jpg');
-    height: 1036px;
+    min-height: calc(100vh - 64px);
     overflow: hidden;
-    padding-top: 0;
+    padding-top: 60px;
+    background-size: cover;
   }
 
   .hero-block__title {
@@ -800,11 +804,6 @@ ul li::before {
   .hero-block_bottom .invite-form {
     margin-top: 0;
   }
-
-  .hero-block_bottom .hero-block__bg-img {
-    top: -40%;
-    left: -25%;
-  }
 }
 
 @media (min-width: 992px) {
@@ -838,9 +837,10 @@ ul li::before {
 
   .motivation-block-img {
     height: 700px;
-    background: -webkit-gradient(linear, right top, left top, from(#2F344F), to(transparent)), url('../img/jpg/Teamwork.jpg');
-    background: linear-gradient(to left, #2F344F 0%, transparent 100%), url('../img/jpg/Teamwork.jpg');
+    background: -webkit-gradient(linear, right top, left top, from(rgba(47, 52, 79, 0.95)), color-stop(40%, rgba(47, 52, 79, 0.8)), to(transparent)), url('../img/jpg/Teamwork.jpg');
+    background: linear-gradient(to left, rgba(47, 52, 79, 0.95) 0%, rgba(47, 52, 79, 0.8) 40%, transparent 100%), url('../img/jpg/Teamwork.jpg');
     background-position: center center;
+    background-size: cover;
   }
 
   .motivation-block-img .col-12 p:last-child {
@@ -993,10 +993,6 @@ ul li::before {
     margin-bottom: 70px;
   }
 
-  .invite-form {
-    margin-bottom: 0;
-  }
-
   .hero-block_bottom {
     height: auto;
     padding-top: 66px;
@@ -1042,9 +1038,7 @@ ul li::before {
   }
 
   .hero-block_bottom {
-    height: 1036px;
-    padding-top: 0;
-    padding-bottom: 0;
+    min-height: calc(100vh - 64px);
   }
 
   .hero-block_bottom .hero-block__title {
@@ -1066,7 +1060,8 @@ ul li::before {
     position: absolute;
     bottom: -25%;
     right: -45%;
-    transform: rotate(0);
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
   }
   
   .hero-block_bottom img.arrow {
@@ -1075,6 +1070,11 @@ ul li::before {
     position: absolute;
     bottom: -25%;
     right: -45%;
-    transform: rotate(0);
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+
+  .invite-form {
+    margin-bottom: 0;
   }
 }
