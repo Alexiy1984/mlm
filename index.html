@@ -11,20 +11,26 @@
   <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script src="js/parralax.js"></script>
   <script src="js/smooth-scroll.js"></script>
   <script src="js/video-modal.js"></script>
 </head>
 <body>
   <div class="header container-fluid d-none d-lg-block">
     <div class="row">
-      <div class="col-12 col-md-3"><p>ОРГАНИЗАТОР КОНФЕРЕНЦИИ: Всеволод Татаринов</p></div>
-      <div class="col-12 col-md-3"><p>ДАТА ПРОВЕДЕНИЯ: 03 - 14 декабря - 15:00 (Мск)</p></div>
-      <div class="col-12 col-md-3"><p>ОНЛАЙН УЧАСТИЕ: Бесплатно</p></div>
-      <div class="col-12 col-md-3"><p>СТОИМОСТЬ ЗАПИСЕЙ КОНФЕРЕНЦИИ: 9900 рублей</p></div>
+      <div class="col-12 col-lg-3"><p>ОРГАНИЗАТОР КОНФЕРЕНЦИИ: Всеволод Татаринов</p></div>
+      <div class="col-12 col-lg-3"><p>ДАТА ПРОВЕДЕНИЯ: 02 - 13 декабря - 15:00 (Мск)</p></div>
+      <div class="col-12 col-lg-3"><p>ОНЛАЙН УЧАСТИЕ: Бесплатно</p></div>
+      <div class="col-12 col-lg-3"><p>СТОИМОСТЬ ЗАПИСЕЙ КОНФЕРЕНЦИИ: 9900 рублей</p></div>
     </div>
   </div>
 
   <div class="hero-block d-flex align-items-center">
+    <div class="menu">
+      <a href="#speakers">Эксперты</a>
+      <a href="#motivation-block-white">Поддержка</a>
+      <a href="#program-block">Программа</a>
+    </div>
     <div class="hero-block__inner container">
       <div class="row">
         <div class="col-12 offset-0 col-md-10 offset-md-1 col-xl-6 offset-xl-0 hero-block__description">
@@ -33,9 +39,8 @@
           <h2 class="hero-block__subtitle text-center">На Максимуме</h2>
           <p class="hero-block__text text-center">Международная онлайн конференция о том, как получить максимальную выгоду и максимальный финансовый результат от сотрудничества с МЛМ компанией.</p>
           <img class="hero-block__bg-img" src="img/png/blot-top-desktop.png" alt="blot">
-          <img class="arrow" src="img/svg/np_arrow_2.svg" alt="arrow">
         </div>
-        <div class="col-12 offset-0 col-md-10 offset-md-1 col-xl-5 offset-xl-1">
+        <div class="col-12 offset-0 col-md-10 offset-md-1 col-xl-5 offset-xl-1 hero-block__form">
             <form class="invite-form" id="form-1" action="https://email.vsevolodtatarinov.ru/add_subscriber.html" accept-charset="utf-8" method="post">
               <!-- Поле Email (обязательно) -->
               <label for="email">E-MAIL</label>
@@ -53,7 +58,8 @@
               <input type="hidden" name="forward_data" value="post" />
               <!-- Кнопка подписаться -->
               <input class="become-member-button" type="submit" value="стать участником"/>
-              </form>
+            </form>
+            <img class="arrow" src="img/svg/np_arrow_2.svg" alt="arrow">
         </div>
       </div>
     </div>  
@@ -72,7 +78,7 @@
     </div>
   </div>
 
-  <div class="motivation-block-white">
+  <div id="motivation-block-white" class="motivation-block-white">
     <div class="container h-100">
       <div class="row h-100">
         <div class="col-12 col-lg-8">
@@ -93,7 +99,7 @@
           <img src="img/png/sert.png" alt="sert">
         </div>
         <div class="col-12 offset-0 col-lg-4 offset-lg-4">
-          <a href="#form-1" class="become-member-button" href="">стать участником</a>
+          <a href="#form-2" class="become-member-button" href="">стать участником</a>
         </div>
       </div>
     </div>
@@ -121,7 +127,8 @@
     </picture>
   </div>
 
-  <div class="program-block">
+  <div id="program-block" class="program-block parallax-container">
+    <img src="img/png/money1.png" class="parallax-img-left" data-parallax='{"y" : -150}'>
     <div class="container">
       <div class="row">
         <div class="col-12">
@@ -166,9 +173,9 @@
         <div class="col-12 offset-0 col-lg-10 offset-lg-1">
           <div class="program-block__img">
             <div class="row h-100">
-              <div class="col-12 offset-0 col-lg-5 offset-lg-1 d-flex flex-column justify-content-lg-center">
-                <p class="marked-text">Темы ведут самые высокооплачиваемые и эффективные сетевики, которые сами реально преодолели планку в 1 000 000 $.</p>
-                <a href="#form-1" class="become-member-button" href="">стать участником</a>
+              <div class="col-12 col-lg-6 d-flex flex-column justify-content-lg-center">
+                <p class="marked-text">Темы ведут самые высокооплачиваемые и эффективные сетевики, которые сами реально преодолели планку в <br class="d-xs-block d-sm-none">  1 000 000 $.</p>
+                <a href="#form-2" class="become-member-button" href="">стать участником</a>
               </div>
             </div>
           </div>
@@ -177,7 +184,8 @@
     </div>
   </div>
 
-  <div class="for-block">
+  <div class="for-block parallax-container">
+  <img src="img/png/money2.png" class="parallax-img-right" data-parallax='{"y" : -150}'>
     <div class="container">
       <div class="row">
         <div class="col-12">
@@ -186,26 +194,26 @@
         <div class="col-12 col-md-6 col-lg-3 text-center">
             <img srcset="img/png/for-block-1.png 1x, img/png/for-block-1@2x.png 2x"
             src="img/png/for-block-1.png" alt="for-block-img-1">
-            <p class="marked-text">Для новичков</p>
-            <p>Конференция создана так, чтобы прежде всего полноценные знания по рекрутингу получили новички индустрии, которые не должны потерять свое время впустую и разочароваться</p>
+            <p class="marked-text text-left">Для новичков</p>
+            <p class="text-left">Конференция создана так, чтобы прежде всего полноценные знания по рекрутингу получили новички индустрии, которые не должны потерять свое время впустую и разочароваться</p>
         </div>
         <div class="col-12 col-md-6 col-lg-3 text-center">
             <img srcset="img/png/for-block-2.png 1x, img/png/for-block-2@2x.png 2x"
             src="img/png/for-block-2.png" alt="for-block-img-2">
-            <p class="marked-text">Для ТОП лидеров</p>
-            <p>Четкие и ясные тренды, где нужно инвестировать свое время и каким образом не допустить ошибок и получить деньги в синергетических формах рекрутирования онлайн и офлайн</p>
+            <p class="marked-text text-left">Для ТОП лидеров</p>
+            <p class="text-left">Четкие и ясные тренды, где нужно инвестировать свое время и каким образом не допустить ошибок и получить деньги в синергетических формах рекрутирования онлайн и офлайн</p>
         </div>
         <div class="col-12 col-md-6 col-lg-3 text-center">
             <img srcset="img/png/for-block-3.png 1x, img/png/for-block-3@2x.png 2x"
             src="img/png/for-block-3.png" alt="for-block-img-3">
-            <p class="marked-text">Для опытных сетевиков</p>
-            <p>Основной блок подготовлен для опытных сетевиков, которые хотели бы подключить к своему бизнесу могущество онлайн технологий и не наступить в коварные капканы, в которые попали абсолютное большинство сетевиков в 2017 году</p>
+            <p class="marked-text text-left">Для опытных сетевиков</p>
+            <p class="text-left">Основной блок подготовлен для опытных сетевиков, которые хотели бы подключить к своему бизнесу могущество онлайн технологий и не наступить в коварные капканы, в которые попали абсолютное большинство сетевиков в 2017 году</p>
         </div>
         <div class="col-12 col-md-6 col-lg-3 text-center">
             <img srcset="img/png/for-block-4.png 1x, img/png/for-block-4@2x.png 2x"
             src="img/png/for-block-4.png" alt="for-block-img-4">
-            <p class="marked-text">Для людей амбициозных</p>
-            <p>,которые только ищут инструмент реализации своих амбиций в жизни</p>
+            <p class="marked-text text-left">Для людей амбициозных</p>
+            <p class="text-left">,которые только ищут инструмент реализации своих амбиций в жизни</p>
         </div>
         </div>
       </div>
@@ -249,7 +257,7 @@
     </div>
   </div>
 
-  <div class="speakers">
+  <div id="speakers" class="speakers">
     <div class="container">
       <div class="row">
         <div class="col-12">
@@ -478,18 +486,17 @@
     <div class="hero-block__inner container">
       <div class="row">
         <div class="col-12 offset-0 col-md-10 offset-md-1 col-xl-6 offset-xl-0 hero-block__description">
-          <p class="hero-block__text text-center text-xl-left text-white">Регистрируйтесь сейчас, <br> эта конференция именно для Вас!</p>
+          <p class="hero-block__text text-center text-xl-left text-white mt-0">Регистрируйтесь сейчас, <br> эта конференция именно для Вас!</p>
           <h1 class="hero-block__title text-center text-xl-left"><span>М</span><span>Л</span><span>М</span></h1>
           <h2 class="hero-block__subtitle text-center text-xl-left">На Максимуме</h2>
           <div class="bottom-color-block">
             <p class="hero-block__text text-center">Воспользуйтесь уникальным шансом:</p>
             <h3 class="text-center">2 - 13 декабря 15:00 (Мск)</h3>
           </div>
-          <p class="hero-block__text text-center text-xl-left">Получи максимальную выгоду и максимальный финансовый результат от сотрудничества с МЛМ компанией.</p>
+          <p class="hero-block__text text-center text-xl-left mt-4 mr-0 mr-xl-5">Получи максимальную выгоду и максимальный финансовый результат от сотрудничества с МЛМ компанией.</p>
           <img class="hero-block__bg-img" src="img/png/blot-bottom-desktop.png" alt="blot">
-          <img class="arrow" src="img/svg/np_arrow_2.svg" alt="arrow">
         </div>
-        <div class="col-12 offset-0 col-md-10 offset-md-1 col-xl-5 offset-xl-1">
+        <div class="col-12 offset-0 col-md-10 offset-md-1 col-xl-6 offset-xl-0 hero-block__form">
             <form class="invite-form" id="form-2" action="https://email.vsevolodtatarinov.ru/add_subscriber.html" accept-charset="utf-8" method="post">
               <h2 class="text-center">СТАНЬ УЧАСТНИКОМ ОНЛАЙН-КОНФЕРЕНЦИИ</h2>
               <!-- Поле Email (обязательно) -->
@@ -508,8 +515,9 @@
               <input type="hidden" name="forward_data" value="post" />
               <!-- Кнопка подписаться -->
               <input class="become-member-button" type="submit" value="стать участником"/>
-              <p class="text-center">Нажимая на кнопку, вы даете согласие на обработку <span class="text-white">персональных данных</span></p>
-              </form>
+              <p class="text-center">Нажимая на кнопку, вы даете согласие на обработку <br> <span class="red-text">персональных данных</span></p>
+            </form>
+            <img class="arrow" src="img/svg/np_arrow_2.svg" alt="arrow">  
         </div>
       </div>
     </div>  
@@ -522,7 +530,7 @@
           <p class="text-center text-md-left">Copyright © 2019.</p>
           <p class="text-center text-md-left">ИП Татаринов Всеволод Серафимович.</p> 
           <p class="text-center text-md-left">Если у Вас возникли вопросы - напишите:</p> 
-          <p class="text-center text-md-left red-text">help@vsevolodtatarinov.ru</p>
+          <a class="footer-link" href="mailto:help@vsevolodtatarinov.ru"><p class="text-center text-md-left red-text">help@vsevolodtatarinov.ru</p></a>
         </div>
         <div class="col-xs-12 col-md-6 mt-4">
           <p class="text-center text-md-right red-text">Соглашение об обработке персональных данных</p>
